@@ -1,0 +1,18 @@
+@model APP.Models.inmentInmueblesEntityDB
+
+<h2>Detalles del Inmueble</h2>
+<div>
+    <h4>@Model.Nombre</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Dirección</dt>
+        <dd>@Model.Direccion</dd>
+        <dt>Teléfono</dt>
+        <dd>@Model.Telefono</dd>
+        <dt>Capacidad de Aforo</dt>
+        <dd>@Model.CapacidadAforo</dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Regresar a la lista de inmuebles", "Index")
+</p>

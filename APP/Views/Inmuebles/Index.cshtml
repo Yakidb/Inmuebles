@@ -1,0 +1,29 @@
+@model IEnumerable<APP.Models.inmentInmueblesEntityDB>
+
+@{
+    ViewBag.Title = "View";
+}
+
+<h2>Lista de inmuebles</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.ActionLink("Detallles del inmueble", "Details", new { id = item.ID })
+            </td>
+        </tr>
+    }
+
+</table>
